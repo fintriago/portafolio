@@ -22,18 +22,18 @@ function btnCopiar(){
     textArea.value = textoCopiado;    
 }
 
-// Funcion para validar si un caracter capturado es mayuscula
+// Funcion para validar si un caracter capturado es mayuscula o minuscula
 function validaCaracter() {
     let miPalabra = textArea.value;
     var letraActual = miPalabra.charAt(miPalabra.length-1);
-    if(esMayuscula(letraActual))
+    if(esMayuscula(letraActual)&&letraActual!=" ")
     {
             alert("La letra " + letraActual + " es mayúscula");
     }
     
 }
 
-
+// Revisa si el parametro letra es mayuscula o minuscula
 function esMayuscula(letra)
 {
     return letra === letra.toUpperCase();
